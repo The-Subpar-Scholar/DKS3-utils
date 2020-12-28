@@ -36,7 +36,7 @@ patch.restore();
 ```
 ## Debug
 ##### print all changes
-we sometimes want to make sure that changes have taken effect so we use ***enumerate_changes()***
+we sometimes want to make sure that changes have taken effect so we use ***enumerate_changes()***;
 prints all changes as address and pre-change bytes
 ```cpp
 enumerate_changes();
@@ -50,13 +50,13 @@ Address : 7FF49F3DC310 | Original Bytes : 4A 0D 00 00
 Address : 7FF49F3DC390 | Original Bytes : 4B 0D 00 00
 ```
 ##### print all params
-we dont always have a list of all params, so we can use ***enumerate_params()***
+we dont always have a list of all params, so we can use ***enumerate_params()***;
 prints list of all params with name and address
 ```cpp
 enumerate_params();
 ```
 ##### print id table
-each param has ids and we dont always know what they are, so we use ***enumerate_id_table("ParamName")***
+each param has ids and we dont always know what they are, so we use ***enumerate_id_table("ParamName")***;
 arg is param name string, same as is printed in with enumerate_params().
 ```cpp
 enumerate_id_table("EquipParamWeapon"); 

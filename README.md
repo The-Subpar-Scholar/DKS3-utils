@@ -1,2 +1,4 @@
-# ParamPatcher
-This is header file for C++, it requires my other header file Process.h to function properly. This header file allows for the editing of params in DarkSoulsIII. Available are all innate functions or a variation thereof of igromanru's param patcher version 2.05. BaseParamClass has NOT been included yet, but will soon be included.
+# DKS3 utils
+This is collection of header files for C++. ParamPatcher.h relies on Process.h and **must** be run with DarkSoulsIII as the target process. Process.h is a series of utilities that were created for more easy reverse engineering of programs, and is in no way limited to DarkSoulsIII.
+
+I am a novice C++ programmer, and this is my first github repos, I will work hard, but by no means do I promise perfection, merely that what I provide will run.

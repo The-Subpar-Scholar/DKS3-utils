@@ -5,6 +5,13 @@
 
 HANDLE process_handle;
 
+Process::Process(const std::string &window_name) {
+    if (window_name.empty()) return;
+    DWORD PID;
+    GetWindowThreadProcessId(FindWindowA(nullptr, window_name.c_str()), &PID);
+    process_handle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, PID);
+}
+
 [[nodiscard]] unsigned long long ptr(unsigned long long base, const std::vector<int> &offsets) { //builds a pointer
     for (int offset : offsets) {
         ReadProcessMemory(process_handle, (LPVOID) base, &base, (SIZE_T) 8, nullptr);
@@ -15,6 +22,7 @@ HANDLE process_handle;
 ///CONSTRUCTOR
 [[nodiscard]] long long Process::readQWORD(unsigned long long address) { // Returns QWORD at address
     ReadProcessMemory(process_handle, (LPVOID) address, &address, (SIZE_T) 8, nullptr);
+
     return address;
 }
 

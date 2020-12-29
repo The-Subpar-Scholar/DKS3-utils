@@ -1,5 +1,5 @@
-#ifndef UNTITLED3_LIBRARY_H
-#define UNTITLED3_LIBRARY_H
+#ifndef PROCESSHEADER_H
+#define PROCESSHEADER_H
 
 #include <windows.h>
 #include <iostream>
@@ -16,7 +16,7 @@ class Process {
 
 public:
 
-    Process(const std::string &window_name);
+    explicit Process(const std::string &window_name);
 
     ///READING
     [[nodiscard]] static long long readQWORD(unsigned long long address); // Returns QWORD at address
@@ -58,4 +58,4 @@ public:
     static void writeString(unsigned long long address, std::string string, unsigned short char_size = 1);
 
 };
-#endif //UNTITLED3_LIBRARY_H
+#endif //PROCESSHEADER_H
